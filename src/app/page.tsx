@@ -22,7 +22,8 @@ export default function Home() {
     await new Promise(resolve => setTimeout(resolve, 1000));
     setIsSubmitting(false);
     setEmail('');
-    alert('Thanks for joining the movement!');
+    // Redirect to evolvii.online
+    window.open('https://evolvii.online', '_blank');
   };
 
   const manifestoPoints = [
@@ -101,7 +102,11 @@ export default function Home() {
 
         {/* Award Badges */}
         <AnimatedSection delay={0.8} direction="up" className="flex flex-col sm:flex-row gap-6 mt-12">
-          <GlowingCard glowColor="purple" className="text-center">
+          <GlowingCard 
+            glowColor="purple" 
+            className="text-center" 
+            onClick={() => window.open('https://evolvii.online', '_blank')}
+          >
             <div className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-3">
               evolvii
             </div>
@@ -111,7 +116,11 @@ export default function Home() {
             <div className="text-xs text-gray-400 italic">soul saving sass</div>
           </GlowingCard>
           
-          <GlowingCard glowColor="blue" className="text-center">
+          <GlowingCard 
+            glowColor="blue" 
+            className="text-center"
+            onClick={() => window.open('https://evolvii.online', '_blank')}
+          >
             <div className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-2">
               WINNER OF
             </div>
