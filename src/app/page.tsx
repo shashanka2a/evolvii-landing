@@ -66,9 +66,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[#121212] text-white overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex flex-col items-center justify-center px-4">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-orange-900/20" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(168,85,247,0.1)_0%,transparent_50%)]" />
+      <section className="relative min-h-screen flex flex-col items-center justify-center px-4 bg-[#121212]">
         
         <motion.div
           initial={{ opacity: 0, y: 50 }}
