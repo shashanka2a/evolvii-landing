@@ -98,6 +98,28 @@ export default function Home() {
           >
             a new funnel: <span className="text-orange-400">doom → action → change</span>
           </motion.div>
+          
+          {/* Hero CTAs */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.0, duration: 0.8 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8"
+          >
+            <Button
+              onClick={() => window.open('https://evolvii.online/', '_blank')}
+              className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white px-8 py-3 text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg shadow-purple-500/25"
+            >
+              Try Evolvii
+            </Button>
+            <Button
+              onClick={() => window.open('https://givebutter.com/OaQqYK', '_blank')}
+              variant="outline"
+              className="border-2 border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-white px-8 py-3 text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg shadow-orange-500/25"
+            >
+              Donate
+            </Button>
+          </motion.div>
         </motion.div>
 
         {/* Award Badges */}
