@@ -74,6 +74,20 @@ export default function Home() {
           transition={{ duration: 1 }}
           className="text-center z-10"
         >
+          {/* Logo */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.2, duration: 0.8 }}
+            className="mb-8"
+          >
+            <img 
+              src="/logo.png" 
+              alt="evolvii logo" 
+              className="h-16 md:h-20 mx-auto"
+            />
+          </motion.div>
+          
           <GlitchText 
             text="eco-paralysis detected!!!" 
             className="text-4xl md:text-6xl lg:text-8xl mb-8 tracking-tight"
@@ -270,8 +284,8 @@ export default function Home() {
           <AnimatedSection delay={0.4} direction="left" className="relative">
             <div className="relative h-96 rounded-2xl overflow-hidden">
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1758843410814-45dd3afb0ce3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGRpZ2l0YWwlMjBhcnQlMjBwdXJwbGUlMjBibHVlJTIwZ3JhZGllbnR8ZW58MXx8fHwxNzU5NTE0MjI0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                alt="Abstract digital art with purple and blue gradients"
+                src="/ee.webp"
+                alt="Eco-anxiety paralysis visual"
                 className="w-full h-full object-cover"
                 fill
               />
