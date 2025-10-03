@@ -110,14 +110,14 @@ export default function Home() {
               onClick={() => window.open('https://evolvii.online/', '_blank')}
               className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white px-8 py-3 text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg shadow-purple-500/25"
             >
-              Try Evolvii
+              try evolvii
             </Button>
             <Button
               onClick={() => window.open('https://givebutter.com/OaQqYK', '_blank')}
               variant="outline"
               className="border-2 border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-white px-8 py-3 text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg shadow-orange-500/25"
             >
-              Donate
+              donate
             </Button>
           </motion.div>
         </motion.div>
