@@ -376,7 +376,7 @@ export default function Home() {
           </p>
           
           <div className="flex justify-center space-x-8 text-sm text-gray-500">
-            <span>© 2024 evolvii</span>
+            <span>© 2025 evolvii</span>
             <span>•</span>
             <span>built with activism + intelligence + attitude</span>
           </div>
