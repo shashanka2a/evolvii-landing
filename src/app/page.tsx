@@ -74,20 +74,6 @@ export default function Home() {
           transition={{ duration: 1 }}
           className="text-center z-10"
         >
-          {/* Logo */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-            className="mb-8"
-          >
-            <img 
-              src="/logo.png" 
-              alt="evolvii logo" 
-              className="h-16 md:h-20 mx-auto"
-            />
-          </motion.div>
-          
           <GlitchText 
             text="eco-paralysis detected!!!" 
             className="text-4xl md:text-6xl lg:text-8xl mb-8 tracking-tight"
@@ -181,50 +167,21 @@ export default function Home() {
           </h2>
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
-          {/* Left: Quote */}
-          <AnimatedSection delay={0.2} direction="right">
-            <GlowingCard glowColor="orange" className="p-8">
-              <div className="space-y-6">
-                <blockquote className="text-lg md:text-xl text-gray-200 leading-relaxed italic">
-                  "{founderMessage.quote}"
-                </blockquote>
-                <div className="flex flex-wrap gap-3 items-center">
-                  <span className="bg-gradient-to-r from-orange-400 to-pink-400 bg-clip-text text-transparent">
-                    {founderMessage.tagline}
-                  </span>
-                  <span className="text-gray-500">~</span>
-                </div>
+        <AnimatedSection delay={0.2} className="max-w-4xl mx-auto mb-20">
+          <GlowingCard glowColor="orange" className="p-8 text-center">
+            <div className="space-y-6">
+              <blockquote className="text-lg md:text-xl text-gray-200 leading-relaxed italic">
+                "{founderMessage.quote}"
+              </blockquote>
+              <div className="flex flex-wrap gap-3 items-center justify-center">
+                <span className="bg-gradient-to-r from-orange-400 to-pink-400 bg-clip-text text-transparent">
+                  {founderMessage.tagline}
+                </span>
+                <span className="text-gray-500">~</span>
               </div>
-            </GlowingCard>
-          </AnimatedSection>
-
-          {/* Right: Visual */}
-          <AnimatedSection delay={0.4} direction="left" className="relative">
-            <div className="relative h-96 rounded-2xl overflow-hidden">
-              <ImageWithFallback
-                src="https://images.unsplash.com/photo-1573761449626-1b80629dafc3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxuZW9uJTIwZ2xvd2luZyUyMGljb25zJTIwdGVjaG5vbG9neXxlbnwxfHx8fDE3NTk1MTQyMjN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                alt="Neon glowing technology"
-                className="w-full h-full object-cover"
-                fill
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-              <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 via-red-500/20 to-pink-500/20 mix-blend-overlay" />
             </div>
-            
-            {/* Floating neon elements */}
-            <motion.div
-              animate={{ y: [-10, 10, -10] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -top-4 -right-4 w-20 h-20 rounded-full bg-gradient-to-r from-orange-500 to-pink-500 opacity-60 blur-sm"
-            />
-            <motion.div
-              animate={{ y: [10, -10, 10] }}
-              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -bottom-4 -left-4 w-16 h-16 rounded-full bg-gradient-to-r from-red-500 to-orange-500 opacity-40 blur-sm"
-            />
-          </AnimatedSection>
-        </div>
+          </GlowingCard>
+        </AnimatedSection>
 
         {/* The Funnel */}
         <AnimatedSection delay={0.6} className="text-center mb-16">
@@ -258,53 +215,24 @@ export default function Home() {
         </AnimatedSection>
       </section>
 
-      {/* Bento Grid Manifesto */}
-      <section className="py-20 px-4 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left: Manifesto */}
-          <div className="space-y-8">
-            {manifestoPoints.map((point, index) => (
-              <AnimatedSection 
-                key={index} 
-                delay={index * 0.2} 
-                direction="right"
-                className="group"
-              >
-                <div className="relative">
-                  <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-purple-500 to-blue-500 rounded-full opacity-60 group-hover:opacity-100 transition-opacity" />
-                  <h3 className="text-2xl md:text-3xl bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent hover:from-purple-300 hover:to-blue-300 transition-all duration-300 cursor-default">
-                    {point}
-                  </h3>
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
-
-          {/* Right: Visual */}
-          <AnimatedSection delay={0.4} direction="left" className="relative">
-            <div className="relative h-96 rounded-2xl overflow-hidden">
-              <ImageWithFallback
-                src="/ee.webp"
-                alt="Eco-anxiety paralysis visual"
-                className="w-full h-full object-cover"
-                fill
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 via-blue-500/20 to-orange-500/20 mix-blend-overlay" />
-            </div>
-            
-            {/* Floating neon elements */}
-            <motion.div
-              animate={{ y: [-10, 10, -10] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -top-4 -right-4 w-20 h-20 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 opacity-60 blur-sm"
-            />
-            <motion.div
-              animate={{ y: [10, -10, 10] }}
-              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -bottom-4 -left-4 w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-orange-500 opacity-40 blur-sm"
-            />
-          </AnimatedSection>
+      {/* Manifesto */}
+      <section className="py-20 px-4 max-w-4xl mx-auto">
+        <div className="space-y-8">
+          {manifestoPoints.map((point, index) => (
+            <AnimatedSection 
+              key={index} 
+              delay={index * 0.2} 
+              direction="up"
+              className="group"
+            >
+              <div className="relative">
+                <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-purple-500 to-blue-500 rounded-full opacity-60 group-hover:opacity-100 transition-opacity" />
+                <h3 className="text-2xl md:text-3xl bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent hover:from-purple-300 hover:to-blue-300 transition-all duration-300 cursor-default">
+                  {point}
+                </h3>
+              </div>
+            </AnimatedSection>
+          ))}
         </div>
       </section>
 
