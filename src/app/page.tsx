@@ -229,24 +229,53 @@ export default function Home() {
         </AnimatedSection>
       </section>
 
-      {/* Manifesto */}
-      <section className="py-20 px-4 max-w-4xl mx-auto">
-        <div className="space-y-8">
-          {manifestoPoints.map((point, index) => (
-            <AnimatedSection 
-              key={index} 
-              delay={index * 0.2} 
-              direction="up"
-              className="group"
-            >
-              <div className="relative">
-                <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-purple-500 to-blue-500 rounded-full opacity-60 group-hover:opacity-100 transition-opacity" />
-                <h3 className="text-2xl md:text-3xl bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent hover:from-purple-300 hover:to-blue-300 transition-all duration-300 cursor-default">
-                  {point}
-                </h3>
-              </div>
-            </AnimatedSection>
-          ))}
+      {/* Bento Grid Manifesto */}
+      <section className="py-20 px-4 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left: Manifesto */}
+          <div className="space-y-8">
+            {manifestoPoints.map((point, index) => (
+              <AnimatedSection 
+                key={index} 
+                delay={index * 0.2} 
+                direction="right"
+                className="group"
+              >
+                <div className="relative">
+                  <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-purple-500 to-blue-500 rounded-full opacity-60 group-hover:opacity-100 transition-opacity" />
+                  <h3 className="text-2xl md:text-3xl bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent hover:from-purple-300 hover:to-blue-300 transition-all duration-300 cursor-default">
+                    {point}
+                  </h3>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+
+          {/* Right: Visual */}
+          <AnimatedSection delay={0.4} direction="left" className="relative">
+            <div className="relative h-96 rounded-2xl overflow-hidden">
+              <ImageWithFallback
+                src="/ee.webp"
+                alt="Eco-anxiety paralysis visual"
+                className="w-full h-full object-cover"
+                fill
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 via-blue-500/20 to-orange-500/20 mix-blend-overlay" />
+            </div>
+            
+            {/* Floating neon elements */}
+            <motion.div
+              animate={{ y: [-10, 10, -10] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute -top-4 -right-4 w-20 h-20 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 opacity-60 blur-sm"
+            />
+            <motion.div
+              animate={{ y: [10, -10, 10] }}
+              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute -bottom-4 -left-4 w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-orange-500 opacity-40 blur-sm"
+            />
+          </AnimatedSection>
         </div>
       </section>
 
