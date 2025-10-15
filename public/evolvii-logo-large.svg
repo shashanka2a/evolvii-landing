@@ -1,29 +1,29 @@
 <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Tree icon from Lucide - larger version -->
-  <path d="M32 4L24 16H16L24 24L16 32L24 40L32 36L40 40L32 32L40 24L32 16L40 16L32 4Z" fill="url(#treeGradient)" stroke="url(#treeStroke)" stroke-width="2" stroke-linejoin="round"/>
+  <!-- Square background -->
+  <rect x="4" y="4" width="56" height="56" rx="12" fill="url(#bgGradient)" stroke="url(#bgStroke)" stroke-width="2"/>
   
-  <!-- Tree trunk -->
-  <rect x="28" y="40" width="8" height="16" fill="url(#trunkGradient)" stroke="url(#trunkStroke)" stroke-width="2"/>
+  <!-- Heart icon from Lucide - larger version -->
+  <path d="M32 16C28 12 22 12 18 16C14 20 14 26 18 30L32 44L46 30C50 26 50 20 46 16C42 12 36 12 32 16Z" fill="url(#heartGradient)" stroke="url(#heartStroke)" stroke-width="2" stroke-linejoin="round"/>
   
   <!-- Gradients -->
   <defs>
-    <linearGradient id="treeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#a855f7;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#3b82f6;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#f97316;stop-opacity:1" />
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0fdf4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#dcfce7;stop-opacity:1" />
     </linearGradient>
-    <linearGradient id="treeStroke" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#c084fc;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#60a5fa;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#fb923c;stop-opacity:1" />
+    <linearGradient id="bgStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#bbf7d0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#86efac;stop-opacity:1" />
     </linearGradient>
-    <linearGradient id="trunkGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1" />
+    <linearGradient id="heartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#059669;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#047857;stop-opacity:1" />
     </linearGradient>
-    <linearGradient id="trunkStroke" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#a78bfa;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#fbbf24;stop-opacity:1" />
+    <linearGradient id="heartStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#34d399;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
     </linearGradient>
   </defs>
 </svg>
