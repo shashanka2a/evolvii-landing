@@ -70,10 +70,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <head>
-        <link rel="icon" href="/logo.png" />
-        <link rel="apple-touch-icon" href="/logo.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/logo.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/logo.png" />
+        <link rel="icon" href="/evolvii-logo.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/evolvii-logo.svg" />
+        <link rel="icon" type="image/svg+xml" sizes="32x32" href="/evolvii-logo.svg" />
+        <link rel="icon" type="image/svg+xml" sizes="16x16" href="/evolvii-logo.svg" />
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="theme-color" content="#121212" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />

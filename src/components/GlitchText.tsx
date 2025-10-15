@@ -37,7 +37,11 @@ export function GlitchText({ text, className = '' }: GlitchTextProps) {
       <div className="absolute inset-0 bg-gradient-to-r from-purple-500 via-blue-500 to-orange-500 bg-clip-text text-transparent blur-sm opacity-50">
         {glitchText}
       </div>
-      <div className="relative bg-gradient-to-r from-purple-400 via-blue-400 to-orange-400 bg-clip-text text-transparent">
+      <div className="relative bg-gradient-to-r from-purple-400 via-blue-400 to-orange-400 bg-clip-text text-transparent drop-shadow-lg">
+        {glitchText}
+      </div>
+      {/* Text shadow for better visibility */}
+      <div className="absolute inset-0 text-white opacity-20 blur-sm">
         {glitchText}
       </div>
     </div>
